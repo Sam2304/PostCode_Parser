@@ -37,9 +37,12 @@
     End Sub
 
     Private Sub btn_scan_fields_Click(sender As System.Object, e As System.EventArgs) Handles btn_scan_fields.Click
+
         If tb_input_location.Text.Length < 1 Then
             Exit Sub
         End If
+
+
 
     End Sub
 

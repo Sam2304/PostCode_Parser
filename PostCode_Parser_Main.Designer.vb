@@ -51,12 +51,14 @@ Partial Class PostCode_Parser_Main
         Me.btn_process_files = New System.Windows.Forms.Button()
         Me.progbar = New System.Windows.Forms.ProgressBar()
         Me.fbrowser_output = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Imported_Data_Store = New System.Data.DataSet()
         Me.grb_input_files.SuspendLayout()
         CType(Me.updown_column_header_row, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_out_files.SuspendLayout()
         Me.tc_files_fields_tabsheet.SuspendLayout()
         Me.tabpage_file_controls.SuspendLayout()
         Me.tabpage_field_selection.SuspendLayout()
+        CType(Me.Imported_Data_Store, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_select_input
@@ -334,6 +336,10 @@ Partial Class PostCode_Parser_Main
         Me.fbrowser_output.RootFolder = System.Environment.SpecialFolder.MyComputer
         Me.fbrowser_output.ShowNewFolderButton = False
         '
+        'Imported_Data_Store
+        '
+        Me.Imported_Data_Store.DataSetName = "NewDataSet"
+        '
         'PostCode_Parser_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -353,6 +359,7 @@ Partial Class PostCode_Parser_Main
         Me.tabpage_file_controls.ResumeLayout(False)
         Me.tabpage_field_selection.ResumeLayout(False)
         Me.tabpage_field_selection.PerformLayout()
+        CType(Me.Imported_Data_Store, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -385,5 +392,6 @@ Partial Class PostCode_Parser_Main
     Friend WithEvents btn_move_field_down As System.Windows.Forms.Button
     Friend WithEvents btn_move_field_up As System.Windows.Forms.Button
     Friend WithEvents fbrowser_output As System.Windows.Forms.FolderBrowserDialog
+    Friend WithEvents Imported_Data_Store As System.Data.DataSet
 
 End Class
