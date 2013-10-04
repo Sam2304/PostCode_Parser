@@ -42,14 +42,15 @@ Partial Class PostCode_Parser_Main
         Me.tc_files_fields_tabsheet = New System.Windows.Forms.TabControl()
         Me.tabpage_file_controls = New System.Windows.Forms.TabPage()
         Me.tabpage_field_selection = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_move_field_down = New System.Windows.Forms.Button()
+        Me.btn_move_field_up = New System.Windows.Forms.Button()
         Me.btn_remove_all_fields = New System.Windows.Forms.Button()
         Me.btn_select_all_fields = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.checkedlist_selected_fields = New System.Windows.Forms.CheckedListBox()
         Me.btn_process_files = New System.Windows.Forms.Button()
         Me.progbar = New System.Windows.Forms.ProgressBar()
+        Me.fbrowser_output = New System.Windows.Forms.FolderBrowserDialog()
         Me.grb_input_files.SuspendLayout()
         CType(Me.updown_column_header_row, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_out_files.SuspendLayout()
@@ -243,8 +244,8 @@ Partial Class PostCode_Parser_Main
         '
         'tabpage_field_selection
         '
-        Me.tabpage_field_selection.Controls.Add(Me.Button2)
-        Me.tabpage_field_selection.Controls.Add(Me.Button1)
+        Me.tabpage_field_selection.Controls.Add(Me.btn_move_field_down)
+        Me.tabpage_field_selection.Controls.Add(Me.btn_move_field_up)
         Me.tabpage_field_selection.Controls.Add(Me.btn_remove_all_fields)
         Me.tabpage_field_selection.Controls.Add(Me.btn_select_all_fields)
         Me.tabpage_field_selection.Controls.Add(Me.Label5)
@@ -257,23 +258,23 @@ Partial Class PostCode_Parser_Main
         Me.tabpage_field_selection.Text = "Field Selection"
         Me.tabpage_field_selection.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btn_move_field_down
         '
-        Me.Button2.Location = New System.Drawing.Point(446, 200)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(158, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Move Selection Up List"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_move_field_down.Location = New System.Drawing.Point(446, 200)
+        Me.btn_move_field_down.Name = "btn_move_field_down"
+        Me.btn_move_field_down.Size = New System.Drawing.Size(158, 23)
+        Me.btn_move_field_down.TabIndex = 5
+        Me.btn_move_field_down.Text = "Move Selection Up List"
+        Me.btn_move_field_down.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btn_move_field_up
         '
-        Me.Button1.Location = New System.Drawing.Point(446, 229)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(158, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Move Selection Down List"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_move_field_up.Location = New System.Drawing.Point(446, 229)
+        Me.btn_move_field_up.Name = "btn_move_field_up"
+        Me.btn_move_field_up.Size = New System.Drawing.Size(158, 23)
+        Me.btn_move_field_up.TabIndex = 4
+        Me.btn_move_field_up.Text = "Move Selection Down List"
+        Me.btn_move_field_up.UseVisualStyleBackColor = True
         '
         'btn_remove_all_fields
         '
@@ -328,6 +329,11 @@ Partial Class PostCode_Parser_Main
         Me.progbar.TabIndex = 6
         Me.progbar.Visible = False
         '
+        'fbrowser_output
+        '
+        Me.fbrowser_output.RootFolder = System.Environment.SpecialFolder.MyComputer
+        Me.fbrowser_output.ShowNewFolderButton = False
+        '
         'PostCode_Parser_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -376,7 +382,8 @@ Partial Class PostCode_Parser_Main
     Friend WithEvents progbar As System.Windows.Forms.ProgressBar
     Friend WithEvents tb_output_file_name As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btn_move_field_down As System.Windows.Forms.Button
+    Friend WithEvents btn_move_field_up As System.Windows.Forms.Button
+    Friend WithEvents fbrowser_output As System.Windows.Forms.FolderBrowserDialog
 
 End Class
